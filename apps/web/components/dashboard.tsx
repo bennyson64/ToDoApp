@@ -106,7 +106,7 @@ export function Dashboard({ metrics, byStatus, overTime }: DashboardProps) {
                   <XAxis
                     dataKey="date"
                     tick={{ fontSize: 12 }}
-                    tickFormatter={(value) =>
+                    tickFormatter={(value: string | number | Date) =>
                       new Date(value).toLocaleDateString("en-US", {
                         month: "short",
                         day: "numeric",
@@ -115,7 +115,7 @@ export function Dashboard({ metrics, byStatus, overTime }: DashboardProps) {
                   />
                   <YAxis allowDecimals={false} />
                   <Tooltip
-                    labelFormatter={(value) =>
+                    labelFormatter={(value: string | number | Date) =>
                       new Date(value).toLocaleDateString("en-US", {
                         month: "long",
                         day: "numeric",
