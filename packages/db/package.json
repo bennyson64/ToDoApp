@@ -4,8 +4,14 @@
   "type": "module",
   "private": true,
   "exports": {
-    ".": "./dist/index.js",
-    "./schema": "./dist/schema.js"
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./schema": {
+      "types": "./dist/schema.d.ts",
+      "default": "./dist/schema.js"
+    }
   },
   "scripts": {
     "build": "tsc",

@@ -1,4 +1,14 @@
 {
-  "extends": "@workspace/typescript-config/base.json"
+  "extends": "@workspace/typescript-config/base.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@workspace/db": ["packages/db/src"],
+      "@workspace/db/*": ["packages/db/src/*"],
+      "@workspace/types": ["packages/types/src"],
+      "@workspace/types/*": ["packages/types/src/*"],
+      "@workspace/ui": ["packages/ui/src"],
+      "@workspace/ui/*": ["packages/ui/src/*"]
+    }
+  }
 }
-

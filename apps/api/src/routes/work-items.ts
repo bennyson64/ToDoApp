@@ -2,13 +2,17 @@ import { Hono } from "hono";
 import { zValidator } from "@hono/zod-validator";
 import { eq } from "drizzle-orm";
 import { db, workItems } from "@workspace/db";
-import { createWorkItemSchema, updateWorkItemSchema } from "@workspace/types";
+import {
+  createWorkItemSchema,
+  updateWorkItemSchema,
+  type WorkItem,
+} from "@workspace/types";
 
 const app = new Hono();
 
 app.get("/", async (c) => {
   const items = await db.query.workItems.findMany({
-    orderBy: (items, { desc }) => [desc(items.createdAt)],
+    orderBy: (items: any, { desc }: any) => [desc(items.createdAt)],
   });
   return c.json(items);
 });
