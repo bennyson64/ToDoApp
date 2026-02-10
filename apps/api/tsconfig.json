@@ -8,6 +8,12 @@
     "moduleResolution": "NodeNext",
 
     "baseUrl": ".",
+    "paths": {
+      "@workspace/db": ["../../packages/db/src"],
+      "@workspace/db/*": ["../../packages/db/src/*"],
+      "@workspace/types": ["../../packages/types/src"],
+      "@workspace/types/*": ["../../packages/types/src/*"]
+    },
 
     "esModuleInterop": true,
     "resolveJsonModule": true,
