@@ -1,6 +1,6 @@
 {
   "installCommand": "pnpm install",
-  "buildCommand": "pnpm build",
+  "buildCommand": "pnpm turbo build",
   "functions": {
     "apps/api/dist/**/*.js": {
       "runtime": "nodejs20.x"

@@ -9,10 +9,10 @@
 
     "baseUrl": ".",
     "paths": {
-      "@workspace/db": ["../../packages/db/src"],
-      "@workspace/db/*": ["../../packages/db/src/*"],
-      "@workspace/types": ["../../packages/types/src"],
-      "@workspace/types/*": ["../../packages/types/src/*"]
+      "@workspace/db": ["../../packages/db/dist/index.d.ts"],
+      "@workspace/db/*": ["../../packages/db/dist/*.d.ts"],
+      "@workspace/types": ["../../packages/types/dist/index.d.ts"],
+      "@workspace/types/*": ["../../packages/types/dist/*.d.ts"]
     },
 
     "esModuleInterop": true,
