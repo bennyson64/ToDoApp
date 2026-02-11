@@ -2,6 +2,7 @@
 
 import "@workspace/ui/globals.css";
 import { Providers } from "@/components/providers";
+// import { Providers } from "./providers.jsx";
 
 // const fontSans = Geist({
 //   subsets: ["latin"],
